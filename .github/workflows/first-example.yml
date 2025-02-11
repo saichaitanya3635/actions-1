@@ -9,9 +9,15 @@ jobs:
          - name: checkout repo
            uses: actions/checkout@v4
 
-         - name: list of files 
-           run: ls 
+         - name: list and read files
+           run: |
+             echo "MY first Github Actions Job"
+             ls -lrta
+             cat README.md
+         - name: Generate ASCII Artwork
+           run: cowsay -f dragon "Run for cover ">> dragon.txt
+             
 
-         - name: read the file
-           run: cat README.md
+         # - name: read the file
+         #   run: 
           
