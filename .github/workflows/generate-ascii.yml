@@ -21,7 +21,7 @@ jobs:
            run: cat dragon.txt
 
          - name: Test File exists
-           run: grep -i "dragon" dragon.txt
+           run: grep -i "cover" dragon.txt
 
         
 
