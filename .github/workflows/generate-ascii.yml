@@ -1,1 +1,32 @@
 
+name: Generic ASCII framework
+
+on: push 
+
+jobs: 
+    ascii-job:
+         runs-on: ubuntu-latest
+         steps: 
+         - name: checkout repo
+           uses: actions/checkout@v4
+
+         - name: Install cowsay program
+           run: sudo apt-get install cowsay -y
+             echo "MY first Github Actions Job"
+            
+         - name: Generate ASCII Artwork
+           run: cowsay -f dragon "Run for cover ">> dragon.txt
+
+         - name: Test File exists
+           run: grep -i "dragon" dragon.txt
+
+         - name: read file 
+           run: cat dragon.txt
+
+         - name: checkout repo files 
+           run: ls -ltra
+             
+
+         # - name: read the file
+         #   run: 
+          
